@@ -5,82 +5,62 @@
 //  Created by Niyah Murphy on 8/1/24.
 //
 
-import SwiftUI
 import CoreData
+import SwiftUI
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-
+    @State private var emoji = ""
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+        NavigationStack {
+            ZStack{
+                //Color(red: 144/255, green: 238/255, blue: 144/255).ignoresSafeArea()
+                Color(red: 255/255, green: 255/255, blue: 237/255).ignoresSafeArea()
+                VStack{
+                    Spacer()
+                    Text("Welcome!").font(.system(size: 75)).bold().foregroundColor(Color(red: 0/255, green: 128/255, blue: 0/255))
+                    Text("Are you finally ready to take control of your financial future? Introducing the Financial Frenzy the fun and engaging way to boost your money management skills!")//.padding(60)
+                        .lineSpacing(1).frame(width: 360, height: 95)
+                    
+                    HStack{
+                        
+                        Image("piggy").resizable().aspectRatio(contentMode: .fit)
                     }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                    HStack{
+                        NavigationLink(destination: Vocabulary()) {
+                            Text("Vocabulary").foregroundStyle(Color.black)
+                        }
+                        .clipShape(RoundedRectangle(cornerRadius: 20.0))
+                        .frame(width: 170 , height: 170).background(Color(red: 0/255, green: 160/255, blue: 0/255)).cornerRadius(25.0)
+                        
+                        NavigationLink(destination: Games()) {
+                            Text("Games").foregroundStyle(Color.black)
+                        }
+                        .frame(width: 170 , height: 170).background(Color(red: 255/255, green: 215/255, blue: 0/255)).cornerRadius(25.0)
+                        
                     }
+                   
+                    HStack{
+                        
+                        NavigationLink(destination: BlogPost()) {
+                            Text("Articles").foregroundStyle(Color.black)
+                            }
+                        .clipShape(RoundedRectangle(cornerRadius: 20.0))
+                        .frame(width: 170 , height: 170).background(Color(red: 255/255, green: 215/255, blue: 0/255)).cornerRadius(25.0)
+                        
+                        NavigationLink(destination: MoreResources()) {
+                            Text("Resources").foregroundStyle(Color.black)
+                        }
+                        .clipShape(RoundedRectangle(cornerRadius: 20.0))
+                        .frame(width: 170 , height: 170).background(Color(red: 0/255, green: 160/255, blue: 0/255)).cornerRadius(25.0)
+                      }
+                    Spacer()
                 }
-            }
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+                
             }
         }
     }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
-
 #Preview {
-    ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    ContentView()
 }
