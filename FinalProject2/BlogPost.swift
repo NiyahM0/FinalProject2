@@ -86,7 +86,7 @@ struct BlogPost: View {
 
                 // Image
 
-                              Image("X.png") // Replace with your image name
+                              Image("piggy") // Replace with your image name
 
                                   .resizable()
 

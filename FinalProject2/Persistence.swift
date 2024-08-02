@@ -59,7 +59,7 @@ struct PersistenceController {
 
     init(inMemory: Bool = false) {
 
-        container = NSPersistentContainer(name: "VocabProj")
+        container = NSPersistentContainer(name: "FinalProject2")
 
         if inMemory {
 

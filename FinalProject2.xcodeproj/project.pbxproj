@@ -28,6 +28,11 @@
 		0696A13E2C5C044E008D4AF0 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0696A13D2C5C044E008D4AF0 /* QuizView.swift */; };
 		0696A1402C5C0467008D4AF0 /* CardBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0696A13F2C5C0466008D4AF0 /* CardBack.swift */; };
 		0696A1422C5C0488008D4AF0 /* AddTermView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0696A1412C5C0488008D4AF0 /* AddTermView.swift */; };
+		306175662C5D222A005CEF46 /* Instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306175652C5D2229005CEF46 /* Instructions.swift */; };
+		306175682C5D22A4005CEF46 /* question_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306175672C5D22A4005CEF46 /* question_1.swift */; };
+		3061756A2C5D22C8005CEF46 /* question_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306175692C5D22C8005CEF46 /* question_2.swift */; };
+		3061756C2C5D22F1005CEF46 /* question_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3061756B2C5D22F1005CEF46 /* question_3.swift */; };
+		3061756E2C5D22FC005CEF46 /* End.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3061756D2C5D22FC005CEF46 /* End.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +77,11 @@
 		0696A13D2C5C044E008D4AF0 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		0696A13F2C5C0466008D4AF0 /* CardBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBack.swift; sourceTree = "<group>"; };
 		0696A1412C5C0488008D4AF0 /* AddTermView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTermView.swift; sourceTree = "<group>"; };
+		306175652C5D2229005CEF46 /* Instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instructions.swift; sourceTree = "<group>"; };
+		306175672C5D22A4005CEF46 /* question_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = question_1.swift; sourceTree = "<group>"; };
+		306175692C5D22C8005CEF46 /* question_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = question_2.swift; sourceTree = "<group>"; };
+		3061756B2C5D22F1005CEF46 /* question_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = question_3.swift; sourceTree = "<group>"; };
+		3061756D2C5D22FC005CEF46 /* End.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = End.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +140,11 @@
 				0696A1312C5C038E008D4AF0 /* Article1View.swift */,
 				0696A1332C5C03AF008D4AF0 /* MoreResources.swift */,
 				0696A1352C5C03DF008D4AF0 /* Games.swift */,
+				306175672C5D22A4005CEF46 /* question_1.swift */,
+				306175692C5D22C8005CEF46 /* question_2.swift */,
+				3061756B2C5D22F1005CEF46 /* question_3.swift */,
+				3061756D2C5D22FC005CEF46 /* End.swift */,
+				306175652C5D2229005CEF46 /* Instructions.swift */,
 				0696A1372C5C03ED008D4AF0 /* Vocabulary.swift */,
 				0696A1392C5C0410008D4AF0 /* TermListView.swift */,
 				0696A13B2C5C042C008D4AF0 /* CardFront.swift */,
@@ -299,6 +314,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3061756E2C5D22FC005CEF46 /* End.swift in Sources */,
+				3061756A2C5D22C8005CEF46 /* question_2.swift in Sources */,
 				0696A1302C5C036D008D4AF0 /* Article2View.swift in Sources */,
 				0696A1062C5C015D008D4AF0 /* Persistence.swift in Sources */,
 				0696A12C2C5C031F008D4AF0 /* Login.swift in Sources */,
@@ -306,13 +323,16 @@
 				0696A1362C5C03DF008D4AF0 /* Games.swift in Sources */,
 				0696A1092C5C015D008D4AF0 /* FinalProject2.xcdatamodeld in Sources */,
 				0696A1382C5C03ED008D4AF0 /* Vocabulary.swift in Sources */,
+				306175662C5D222A005CEF46 /* Instructions.swift in Sources */,
 				0696A12E2C5C0341008D4AF0 /* BlogPost.swift in Sources */,
 				0696A1422C5C0488008D4AF0 /* AddTermView.swift in Sources */,
 				0696A1322C5C038E008D4AF0 /* Article1View.swift in Sources */,
+				306175682C5D22A4005CEF46 /* question_1.swift in Sources */,
 				0696A13A2C5C0410008D4AF0 /* TermListView.swift in Sources */,
 				0696A0FF2C5C0157008D4AF0 /* ContentView.swift in Sources */,
 				0696A13C2C5C042C008D4AF0 /* CardFront.swift in Sources */,
 				0696A13E2C5C044E008D4AF0 /* QuizView.swift in Sources */,
+				3061756C2C5D22F1005CEF46 /* question_3.swift in Sources */,
 				0696A0FD2C5C0157008D4AF0 /* FinalProject2App.swift in Sources */,
 				0696A1342C5C03AF008D4AF0 /* MoreResources.swift in Sources */,
 			);

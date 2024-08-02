@@ -59,7 +59,7 @@ struct Article2View: View {
 
                 //Image
 
-                Image("Why-is-financial-literacy-important_Amruta-A._Abby-M-2.jpg")
+                Image("Why-is-financial-literacy-important_Amruta-A._Abby-M-2")
 
                     .resizable()
 
@@ -133,7 +133,7 @@ struct Article2View: View {
 
                 //Image
 
-                Image("Common_Budgeting_Methods.png")
+                Image("Common_Budgeting_Methods")
 
                     .resizable()
 

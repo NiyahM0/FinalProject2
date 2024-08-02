@@ -1,10 +1,3 @@
-//
-//  Vocabulary.swift
-//  FinalProject2
-//
-//  Created by Niyah Murphy on 8/1/24.
-//
-
 import SwiftUI
 
 import CoreData

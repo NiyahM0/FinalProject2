@@ -55,7 +55,7 @@ struct Article1View: View {
 
                 // Image
 
-                Image("PS-022224-Financial-literacy-research-1404697259-web.jpg")
+                Image("PS-022224-Financial-literacy-research-1404697259-web")
 
                     .resizable()
 
